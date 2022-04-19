@@ -8,6 +8,9 @@ const LoginBtn = styled.button`
   border: none;
   margin:0;
   border-radius: 4px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
 
   &:hover{  
     cursor: pointer;

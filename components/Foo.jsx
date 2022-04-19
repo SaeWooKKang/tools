@@ -14,7 +14,8 @@ const Foo = () => {
   };
   
   return (
-    <Div style={{height: '100vh', display:'flex', flexDirection:'column'}}>
+    <Div style={{ height: '100vh', display:'flex', flexDirection:'column' }}>
+
       {/* 로그인 폼  */}
       <>
         <span>

@@ -11,7 +11,7 @@ const CloseButton = styled.button`
   text-align: center;
 
   &:hover{  
-    background-color : ${props => props.bgColor || 'black'};
+    background-color : ${ props => props.bgColor || 'black' };
     cursor: pointer;
     border-radius: 2px;
   }

@@ -5,6 +5,17 @@ import Input from './Input';
 import LoginBtn from './LoginBtn';
 import useInput from '../../hooks/useInput';
 
+const SignInWrapper = styled.div`
+  .form-container {
+    display: flex;
+    flex-direction: column;
+
+    .input-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+`;
 
 const SignIn = () => {
   const [id, handleIdChange] = useInput('');
@@ -16,29 +27,33 @@ const SignIn = () => {
   };
 
   return(
-    <>
-      <div style={{display:'flex', flexDirection: 'column'}}>      
-        <Input 
-          type={'id'}
-          name={'login-id'}
-          placeholder={'이메일'}
-          text={id}
-          onChange={handleIdChange}
-          borderColor={'orange'}
-        />
-        <Input 
-          type={'password'}
-          name={'login-password'}
-          placeholder={'비밀번호'}
-          text={pw}
-          onChange={handlePwChange}
-          borderColor={'orange'}
-        />
+    <SignInWrapper>
+      <div className='form-container'>      
+        <div className='input-container'>
+          <Input 
+            type={'id'}
+            name={'login-id'}
+            placeholder={'이메일'}
+            text={id}
+            onChange={handleIdChange}
+            borderColor={'orange'}
+          />
+        </div>
+        <div className='input-container'>
+          <Input 
+            type={'password'}
+            name={'login-password'}
+            placeholder={'비밀번호'}
+            text={pw}
+            onChange={handlePwChange}
+            borderColor={'orange'}
+          />
+        </div>
       </div>
-      <div className='login__btn'>
+      <div className='login-btn'>
         <LoginBtn onClick={handleLoginBtnClicked}>로그인</LoginBtn>
       </div>
-    </>
+    </SignInWrapper>
   );
 };
 
