@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import CloseButton from './CloseBtn';
+import CloseBtn from './CloseBtn';
 import Logo from './Logo';
 import SignIn from './SignIn';
+import SocialLogin from './SocialLogin';
+import FindAndJoin from './FindAndJoin';
 
 const Modal = styled.div`
   position: fixed; 
@@ -23,7 +25,7 @@ const Modal = styled.div`
 const LoginWrapper = styled.div`
   height: 100%;
   width: 312px; 
-  height: 250px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   padding: 24px;
@@ -52,13 +54,17 @@ const LoginForm = ({ onCloseBtn }) => {
       <div className='modal__body'>
         <LoginWrapper>
           <div className='close__btn'>
-            <CloseButton bgColor='orange' onClick={ onCloseBtn }>x</CloseButton>
+            <CloseBtn bgColor='orange' onClick={ onCloseBtn }>x</CloseBtn>
           </div>
           <div className='logo'>
             <Logo />
           </div>
           <>
             <SignIn />
+          </>
+          <>
+            <FindAndJoin />
+            <SocialLogin />
           </>
         </LoginWrapper>
       </div>
