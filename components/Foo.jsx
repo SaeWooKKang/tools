@@ -7,6 +7,7 @@ import LoginFrom from './LoginForm'
 
 import GridCard from './GridCard';
 import { dummyImg } from './GridCard/dummyImg';
+import Frame from './Frame/Frame';
 
 const Div = styled.div`
   background-color: skyblue;
@@ -35,8 +36,23 @@ const Foo = () => {
         }
       </>
 
+      <>
+        <div style={{margin:"20px 0"}}>
+          ⬇️ Frame Component ⬇️
+        </div>
+        <Frame 
+          src='https://picsum.photos/300'
+          width= '400px'
+          height= '400px'
+        > 
+          텍스트 위치 입니다. 텍스트 위치 입니다. 텍스트 위치 입니다. 
+          텍스트 위치 입니다. 텍스트 위치 입니다. 텍스트 위치 입니다. 
+        </Frame>
+      </>
+
       {/* Grid Card */}
       <div style={{marginTop:'20px'}}> ⬇️⬇️ 그리드 컴포넌트 ⬇️⬇️</div>
+
       <div style={{width: 'auto', height:'atuo'}}>
         <GridCard
           datum={dummyImg}
